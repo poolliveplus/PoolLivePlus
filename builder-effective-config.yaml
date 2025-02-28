@@ -1,0 +1,36 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.oneperson.plplus
+asar: false
+productName: Pool Live Plus
+nsis:
+  oneClick: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  installerIcon: build/icons/icon.ico
+  uninstallerIcon: build/icons/icon.ico
+  installerHeaderIcon: build/icons/icon.ico
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Pool Live Plus
+  include: build/installer.nsh
+dmg:
+  contents:
+    - x: 410
+      'y': 150
+      type: link
+      path: /Applications
+    - x: 130
+      'y': 150
+      type: file
+mac:
+  icon: build/icons/icon.icns
+win:
+  icon: build/icons/icon.ico
+  target:
+    - target: nsis
+linux:
+  icon: build/icons
+files: []
+electronVersion: 32.3.1
